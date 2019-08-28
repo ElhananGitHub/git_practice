@@ -180,7 +180,7 @@ print(full_gradebook)
 
 print("--------------------------------------------------------------------------------------------")
 
-#Function for determinating the slope form intercept from a slope and a point in a line
+#Function for determinating the slope form intercept (y=mx+a) from a slope and a point in a line
 
 def slope_form(m,a,b):
 	ma = m * a
@@ -194,3 +194,29 @@ def slope_form(m,a,b):
 
 slope_form(2,3,6)
 slope_form(2,7,1)
+print("--------------------------------------------------------------------------------------------")
+
+#Function for determinating the point slope form (y-b=m(x-a)), from 2 distint points in a graph ((a,b),(c,d))
+from fractions import Fraction
+def point_form(a,b,c,d):
+	m = Fraction((d - b) / (c - a)).limit_denominator()
+	ma = m * a
+	ma_b = -ma + b
+	if a > 0:
+		print("The poitn slope form is: \n"+"y - "+str(b)+" = "+str(m)+"(x - "+str(a)+")")
+	elif a == 0:
+		print("The poitn slope form is: \n"+"y - "+str(b)+" = "+str(m)+"x")
+	elif a < 0:
+		print("The poitn slope form is: \n"+"y - "+str(b)+" = "+str(m)+"(x "+str(a)+")")
+	if ma_b > 0:
+		print("The slope form intercept is: \n"+"y="+str(m)+"x + "+str(ma_b))
+	elif ma_b == 0:
+		print("The slope form intercept is: \n"+"y="+str(m)+"x")
+	else:
+		print("The slope form intercept is: \n"+"y="+str(m)+"x "+str(ma_b))
+
+point_form(50,21,73,13)
+	
+print("--------------------------------------------------------------------------------------------")
+from fractions import Fraction
+print(Fraction(.25))
