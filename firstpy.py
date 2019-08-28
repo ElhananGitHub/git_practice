@@ -156,6 +156,8 @@ def cheapest2(heavy):
 print(cheapest(10))
 print(cheapest2(20))
 
+print("--------------------------------------------------------------------------------------------")
+
 
 
 #Creating lists
@@ -175,3 +177,20 @@ full_gradebook = last_semester_gradebook + gradebook
 
 print(gradebook)
 print(full_gradebook)
+
+print("--------------------------------------------------------------------------------------------")
+
+#Function for determinating the slope form intercept from a slope and a point in a line
+
+def slope_form(m,a,b):
+	ma = m * a
+	ma_b = -ma + b
+	if ma_b > 0:
+		print("y="+str(m)+"x + "+str(ma_b))
+	elif ma_b == 0:
+		print("y="+str(m)+"x")
+	else:
+		print("y="+str(m)+"x "+str(ma_b))
+
+slope_form(2,3,6)
+slope_form(2,7,1)
